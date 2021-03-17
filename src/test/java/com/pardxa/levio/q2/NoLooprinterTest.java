@@ -22,4 +22,22 @@ public class NoLooprinterTest {
         NoLooprinter.printAll(5);
         assertEquals("aaaaabbbbb", outputCaptor.toString().trim());
     }
+
+    @Test
+    void printNegative() {
+        NoLooprinter.printAll(-5);
+        assertEquals("", outputCaptor.toString().trim());
+    }
+
+    @Test
+    void printOnce() {
+        NoLooprinter.printAll(1);
+        assertEquals("ab", outputCaptor.toString().trim());
+    }
+
+    @Test
+    void printZero() {
+        NoLooprinter.printAll(0);
+        assertEquals("", outputCaptor.toString().trim());
+    }
 }

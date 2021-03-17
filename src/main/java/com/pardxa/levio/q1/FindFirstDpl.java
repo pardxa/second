@@ -23,7 +23,7 @@ public class FindFirstDpl {
         return null;
     }
 
-    public static Integer findNotEfficient(int[] array) {
+    public static Integer findMoreEfficient(int[] array) {
         int arrayLength = array.length;
         Set<Integer> container = new HashSet<>();
         for (int i = 0; i < arrayLength; i++) {
